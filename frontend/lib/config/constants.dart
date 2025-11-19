@@ -1,6 +1,6 @@
 class AppConstants {
   // API Configuration
-  static const String baseUrl = 'http://10.0.2.2:8000/api'; // Android emulator
+  static const String baseUrl = 'http://localhost:8000/api'; // Android emulator
   // Use 'http://localhost:8000/api' for web
   // Use 'http://YOUR_COMPUTER_IP:8000/api' for physical device
   
