@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
+from decouple import config
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--50l-4#i26_d5%15j^x8td$8)#=yf+muo-#&#v)h$p5uv9p*di'
-
+SECRET_KEY = config('SECRET_KEY', default='django-insecure-default-key')
+#'django-insecure--50l-4#i26_d5%15j^x8td$8)#=yf+muo-#&#v)h$p5uv9p*di'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
 
 # Application definition
@@ -50,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware', #added as the second item
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -83,14 +86,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'zingira_db',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
 
 
@@ -129,7 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
@@ -137,7 +136,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # CORS Settings
-CORS_ALLOW_ALL_ORIGINS = True  # For development only
+CORS_ALLOW_ALL_ORIGINS = DEBUG  # For development only
+
+CORS_ALLOWED_ORIGINS = config(
+    'CORS_ALLOWED_ORIGINS',
+    default='http://localhost:3000'
+).split(',') if not DEBUG else []
 
 # REST Framework Settings
 REST_FRAMEWORK = {
