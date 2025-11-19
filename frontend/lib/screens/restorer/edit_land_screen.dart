@@ -9,7 +9,7 @@ import '../../services/api_service.dart';
 import '../../widgets/common/app_button.dart';
 import '../../widgets/common/app_text_field.dart';
 import '../../widgets/common/loading_indicator.dart';
-import '../../widgets/common/error_dialog.dart';
+import '../../widgets/common/error_dialogue.dart';
 
 class EditLandScreen extends StatefulWidget {
   final land.LandListing landListing;

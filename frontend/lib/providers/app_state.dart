@@ -242,4 +242,19 @@ class AppState extends ChangeNotifier {
       debugPrint('Mark notification read error: $e');
     }
   }
+
+    // Update user profile
+  Future<bool> updateProfile(Map<String, dynamic> data) async {
+    setLoading(true);
+    clearError();
+    try {
+      _currentUser = await _apiService.updateProfile(data);
+      setLoading(false);
+      return true;
+    } catch (e) {
+      setError(e.toString());
+      setLoading(false);
+      return false;
+    }
+  }
 }

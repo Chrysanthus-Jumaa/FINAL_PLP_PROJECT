@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import '../../config/theme.dart';
 import '../../providers/app_state.dart';
 import '../../widgets/common/loading_indicator.dart';
-import '../../widgets/common/error_dialog.dart';
+import '../../widgets/common/error_dialogue.dart';
 import '../auth/login_screen.dart';
 import 'add_land_screen.dart';
 import 'matches_screen.dart';
@@ -503,11 +503,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 
-  Widget _buildPlaceholder(String title) {
-    return Center(
-      child: Text('$title - Coming in next steps'),
-    );
-  }
+  // Widget _buildPlaceholder(String title) {
+  //   return Center(
+  //     child: Text('$title - Coming in next steps'),
+  //   );
+  // }
 
   Future<void> _confirmDelete(AppState appState, int landId) async {
     final confirmed = await showDialog<bool>(

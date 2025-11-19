@@ -5,7 +5,7 @@ import '../../config/constants.dart';
 import '../../providers/app_state.dart';
 import 'carousel_screen.dart';
 import '../restorer/dashboard_screen.dart';
-import '../organization/dashboard_screen.dart' as org;
+import '../organisation/dashboard_screen.dart' as org;
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

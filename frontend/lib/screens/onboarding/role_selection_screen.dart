@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../config/theme.dart';
 import '../auth/restorer_registration/step1_personal_info.dart';
-import '../auth/organization_registration/step1_org_info.dart';
+import '../auth/organisation_registration/step1_org_info.dart';
 
 class RoleSelectionScreen extends StatelessWidget {
   const RoleSelectionScreen({Key? key}) : super(key: key);

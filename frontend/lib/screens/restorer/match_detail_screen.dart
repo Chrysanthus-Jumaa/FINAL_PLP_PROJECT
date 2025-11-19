@@ -3,11 +3,11 @@ import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import '../../config/theme.dart';
 import '../../models/match_request.dart';
-import '../../models/land_listing.dart' as land;
+//import '../../models/land_listing.dart' as land;
 import '../../providers/app_state.dart';
 import '../../widgets/common/app_button.dart';
 import '../../widgets/common/loading_indicator.dart';
-import '../../widgets/common/error_dialog.dart';
+import '../../widgets/common/error_dialogue.dart';
 
 class MatchDetailScreen extends StatefulWidget {
   final MatchRequest matchRequest;

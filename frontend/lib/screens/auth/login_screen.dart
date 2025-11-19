@@ -7,7 +7,7 @@ import '../../widgets/common/app_button.dart';
 import '../../widgets/common/app_text_field.dart';
 import '../../widgets/common/loading_indicator.dart';
 import '../restorer/dashboard_screen.dart';
-import '../organization/dashboard_screen.dart' as org;
+import '../organisation/dashboard_screen.dart' as org;
 import '../onboarding/role_selection_screen.dart';
 
 class LoginScreen extends StatefulWidget {
