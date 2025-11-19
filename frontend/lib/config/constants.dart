@@ -1,6 +1,6 @@
 class AppConstants {
   // API Configuration
-  static const String baseUrl = 'https://zingiranakama-proj2.onrender.com'; // Render link
+  static const String baseUrl = 'https://zingiranakama-proj2.onrender.com/api'; // Render link
   // Use 'http://localhost:8000/api' for web
   // Use 'http://YOUR_COMPUTER_IP:8000/api' for physical device
   
