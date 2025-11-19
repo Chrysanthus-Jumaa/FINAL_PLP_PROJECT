@@ -137,10 +137,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS Settings
 CORS_ALLOW_ALL_ORIGINS = DEBUG  # For development only
-
+#http://localhost:3000
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
-    default='http://localhost:3000'
+    default='https://final-plp-project-five.vercel.app/'
 ).split(',') if not DEBUG else []
 
 # REST Framework Settings
