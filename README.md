@@ -1,7 +1,5 @@
 # 🌱 ZingiraNakama - Connecting Land to Purpose
 
-![ZingiraNakama Banner](https://via.placeholder.com/1200x300/2196F3/FFFFFF?text=ZingiraNakama+-+Restoration+Marketplace)
-
 ## 📋 Table of Contents
 - [Overview](#overview)
 - [Live Demo](#live-demo)
@@ -11,8 +9,6 @@
 - [Getting Started](#getting-started)
 - [Local Development Setup](#local-development-setup)
 - [Deployment](#deployment)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
 - [Contact](#contact)
 
 ---
@@ -50,9 +46,6 @@ A digital marketplace that:
 
 ### 📊 Pitch Deck
 **View:** [https://www.canva.com/design/DAGy231ZyAM/D8q7egXXyCYtuRSt5QrLOQ/edit?utm_content=DAGy231ZyAM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton]
-
-### 🔗 API Documentation
-**Backend:** [https://zingiranakama-proj2.onrender.com/api/](https://zingiranakama-proj2.onrender.com/api/)
 
 ---
 
@@ -131,7 +124,7 @@ A digital marketplace that:
   - Sidebar navigation for desktop/tablet
 
 - **Data Management**
-  - Kenya counties and subcounties (seeded data for 7 major counties)
+  - Kenya counties and subcounties (seeded data for 7 major counties i.e Nairobi, Mombasa, Kisumu, Nakuru, Kiambu, Machakos and Kakamega)
   - 4 restoration types (Forest, Agroforestry, Wetlands, Mangroves)
   - Automatic unit conversions (1 acre = 0.404686 hectares)
 
