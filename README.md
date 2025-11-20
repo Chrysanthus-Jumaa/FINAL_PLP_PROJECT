@@ -599,7 +599,7 @@ For production release:
 
 ### Project Maintainer
 
-**Name:** [Chrysanthus Mambo Jumaa]  
+**Name:** Chrysanthus Mambo Jumaa  
 **Email:** chrysanthusjumaa@gmail.com  
 **GitHub:** [@Chrysanthus-Jumaa](https://github.com/yourusername)  
 **LinkedIn:** [Chrysanthus Jumaa](https://www.linkedin.com/in/chrysanthus-mambo-jumaa-53b011332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
@@ -608,7 +608,6 @@ For production release:
 
 - **GitHub Repository:** [https://github.com/Chrysanthus-Jumaa/FINAL_PLP_PROJECT.git](https://github.com/Chrysanthus-Jumaa/FINAL_PLP_PROJECT.git)
 - **Live Demo:** [https://final-plp-project-five.vercel.app/](https://final-plp-project-five.vercel.app/)
-- **API Documentation:** [https://zingiranakama-proj2.onrender.com/api/](https://zingiranakama-proj2.onrender.com/api/)
 
 ---
 
