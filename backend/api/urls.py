@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     # Authentication
-    path('seed-database/', views.seed_database, name='seed_database'),
+    #path('seed-database/', views.seed_database, name='seed_database'),
     path('register/', views.register, name='register'),
     path('login/', views.login, name='login'),
     path('profile/', views.get_user_profile, name='get_user_profile'),

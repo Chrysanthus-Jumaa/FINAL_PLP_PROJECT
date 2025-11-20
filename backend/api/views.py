@@ -461,21 +461,21 @@ def mark_notification_read(request, notification_id):
             'error': 'Notification not found'
         }, status=status.HTTP_404_NOT_FOUND)
     
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
+# from django.http import JsonResponse
+# from django.views.decorators.csrf import csrf_exempt
 
-@csrf_exempt
-def seed_database(request):
-    """ONE-TIME USE ONLY - Remove after seeding"""
-    if request.method == 'POST':
-        secret = request.POST.get('secret')
-        if secret != 'seed-my-database-now':
-            return JsonResponse({'error': 'Unauthorized'}, status=403)
+# @csrf_exempt
+# def seed_database(request):
+#     """ONE-TIME USE ONLY - Remove after seeding"""
+#     if request.method == 'POST':
+#         secret = request.POST.get('secret')
+#         if secret != 'seed-my-database-now':
+#             return JsonResponse({'error': 'Unauthorized'}, status=403)
         
-        from django.core.management import call_command
-        try:
-            call_command('seed_data')
-            return JsonResponse({'message': 'Database seeded successfully'})
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=500)
-    return JsonResponse({'error': 'POST required'}, status=400)
+#         from django.core.management import call_command
+#         try:
+#             call_command('seed_data')
+#             return JsonResponse({'message': 'Database seeded successfully'})
+#         except Exception as e:
+#             return JsonResponse({'error': str(e)}, status=500)
+#     return JsonResponse({'error': 'POST required'}, status=400)
